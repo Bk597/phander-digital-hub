@@ -1,0 +1,779 @@
+/* =========================================================
+   GB Digital Hub — Website Theme (RESTORED ORIGINAL DESIGN)
+   Brand Teal #006A60 · Light Teal #00A896 · Amber #E59819
+   Font: Poppins · Soft cards · Gradient hero + phone mockup
+   ========================================================= */
+
+:root {
+  --brand: #006a60;
+  --brand-dark: #004d45;
+  --brand-light: #00a896;
+  --amber: #e59819;
+  --purple: #6750a4;
+  --ink: #12211f;
+  --muted: #5b6b68;
+  --bg-soft: #f4f8f7;
+}
+
+* {
+  font-family: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+/* Bootstrap body/form controls ko bhi Poppins karana zaroori hai (specificity) */
+body,
+input,
+button,
+select,
+textarea {
+  font-family: "Poppins", "Segoe UI", system-ui, -apple-system, sans-serif !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fbfdfc;
+  color: var(--ink);
+  overflow-x: hidden;
+  padding-top: 62px; /* fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* ---------- Brand helpers ---------- */
+.text-brand { color: var(--brand) !important; }
+.text-brand-light { color: var(--brand-light) !important; }
+.text-amber { color: var(--amber) !important; }
+.bg-brand { background-color: var(--brand) !important; }
+.bg-brand-light { background-color: var(--brand-light) !important; }
+.bg-amber { background-color: var(--amber) !important; }
+.bg-soft { background-color: var(--bg-soft) !important; }
+
+/* =========================================================
+   NAVBAR
+   ========================================================= */
+.ph-navbar {
+  background: #ffffff;
+  z-index: 1030;
+  transition: box-shadow 0.2s ease, padding 0.2s ease;
+}
+.ph-navbar .navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-weight: 800;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.ph-navbar .nav-link {
+  font-weight: 500;
+  font-size: 0.92rem;
+  color: #33413f;
+  padding: 0.45rem 0.85rem !important;
+  border-radius: 8px;
+  transition: all 0.15s ease;
+}
+.ph-navbar .nav-link:hover {
+  color: var(--brand);
+  background: rgba(0, 106, 96, 0.06);
+}
+.ph-navbar .nav-link.active {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+/* Bootstrap .collapse fix (Tailwind CDN utility clash) */
+.collapse { visibility: visible !important; }
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn-brand,
+.btn-teal {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand-light) 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  box-shadow: 0 6px 16px rgba(0, 106, 96, 0.25);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn-brand:hover, .btn-brand:focus,
+.btn-teal:hover, .btn-teal:focus {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 106, 96, 0.32);
+}
+.btn-ghost-brand,
+.btn-outline-app {
+  background: rgba(0, 106, 96, 0.06);
+  color: var(--brand);
+  border: 1.5px solid rgba(0, 106, 96, 0.35);
+  border-radius: 12px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: all 0.15s ease;
+}
+.btn-ghost-brand:hover, .btn-ghost-brand:focus,
+.btn-outline-app:hover, .btn-outline-app:focus {
+  background: rgba(0, 106, 96, 0.12);
+  color: var(--brand-dark);
+  border-color: var(--brand);
+}
+.btn-amber {
+  background: linear-gradient(135deg, var(--amber), #f0b13d);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 6px 16px rgba(229, 152, 25, 0.3);
+}
+.btn-amber:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HERO (home)
+   ========================================================= */
+.hero {
+  background:
+    radial-gradient(900px 420px at 12% -10%, rgba(0, 168, 150, 0.14), transparent 60%),
+    radial-gradient(700px 380px at 95% 0%, rgba(229, 152, 25, 0.10), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f2f9f7 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(0, 168, 150, 0.12);
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 168, 150, 0.25);
+}
+.hero-title {
+  font-size: clamp(2rem, 4.6vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+.hero-title .accent {
+  background: linear-gradient(120deg, var(--brand), var(--brand-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lead-soft {
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+.hero-mountain {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  line-height: 0;
+  pointer-events: none;
+}
+
+/* =========================================================
+   SECTION HEADERS
+   ========================================================= */
+.section-eyebrow {
+  display: inline-block;
+  background: rgba(0, 106, 96, 0.08);
+  color: var(--brand);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 106, 96, 0.15);
+}
+.section-title {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+.float-card {
+  background: #fff;
+  border: 1px solid rgba(0, 106, 96, 0.10);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(12, 44, 40, 0.08);
+}
+.card-soft {
+  background: #fff;
+  border: 1px solid rgba(0, 106, 96, 0.10);
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(12, 44, 40, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+.card-soft.hoverable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(12, 44, 40, 0.12);
+}
+.icon-tile {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.45rem;
+  background: rgba(0, 106, 96, 0.08);
+  border: 1px solid rgba(0, 106, 96, 0.14);
+  margin-bottom: 14px;
+}
+.stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1.1;
+}
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+/* old-style hub card (Explore the Hubs) */
+.hub-card,
+.app-card {
+  background: #fff;
+  border: 1px solid rgba(0, 106, 96, 0.10);
+  border-radius: 20px;
+  padding: 26px;
+  height: 100%;
+  box-shadow: 0 8px 24px rgba(12, 44, 40, 0.06);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  flex-direction: column;
+}
+.hub-card:hover,
+.app-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(12, 44, 40, 0.12);
+}
+.hub-card h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.hub-card p {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  flex: 1;
+}
+.card-arrow {
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 0.86rem;
+  margin-top: 14px;
+}
+.card-arrow i {
+  transition: transform 0.15s ease;
+}
+.hub-card:hover .card-arrow i {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+.badge-soft {
+  display: inline-block;
+  background: rgba(0, 168, 150, 0.12);
+  color: var(--brand);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+}
+.badge-amber {
+  display: inline-block;
+  background: rgba(229, 152, 25, 0.14);
+  color: #8a5a00;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+}
+.badge-purple {
+  display: inline-block;
+  background: rgba(103, 80, 164, 0.12);
+  color: var(--purple);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+}
+
+/* =========================================================
+   PROGRESS BARS
+   ========================================================= */
+.progress-ph {
+  height: 9px;
+  background: #e4efed;
+  border-radius: 99px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-ph > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--brand), var(--brand-light));
+  border-radius: 99px;
+  transition: width 0.4s ease;
+}
+
+/* =========================================================
+   PHONE MOCKUP (hero)
+   ========================================================= */
+.phone-mock {
+  width: 288px;
+  background: #10221f;
+  border-radius: 38px;
+  padding: 12px;
+  box-shadow: 0 30px 60px rgba(6, 33, 30, 0.35);
+  position: relative;
+}
+.phone-notch {
+  width: 96px;
+  height: 18px;
+  background: #10221f;
+  border-radius: 0 0 14px 14px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+.phone-screen {
+  background: #f7faf9;
+  border-radius: 28px;
+  min-height: 470px;
+}
+.mini-grid-card {
+  border: 1px solid rgba(0, 106, 96, 0.18);
+  border-radius: 14px;
+  padding: 10px;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #23312f;
+}
+.mini-grid-card .emoji {
+  font-size: 1.15rem;
+}
+
+/* floating animations */
+.floaty {
+  animation: ph-float 4s ease-in-out infinite;
+}
+.floaty-slow {
+  animation: ph-float 5.5s ease-in-out infinite;
+}
+@keyframes ph-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* =========================================================
+   DARK FEATURED SECTION (opportunities strip on home)
+   ========================================================= */
+.dark-strip {
+  background: linear-gradient(135deg, #06211e 0%, #004d45 60%, #006a60 100%);
+}
+
+/* =========================================================
+   ROADMAP TIMELINE
+   ========================================================= */
+.timeline-item {
+  display: flex;
+  gap: 14px;
+  position: relative;
+  padding-bottom: 18px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 30px;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0, 106, 96, 0.15);
+}
+.timeline-item:last-child::before {
+  display: none;
+}
+.timeline-bullet {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  flex: 0 0 28px;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #e4efed;
+  color: var(--brand);
+  border: 2px solid #cfe3e0;
+  z-index: 1;
+}
+.timeline-item.done .timeline-bullet {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+.timeline-item h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 2px 0 3px;
+}
+.timeline-item p {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 0;
+  line-height: 1.55;
+}
+.timeline-item.done h5 {
+  color: var(--brand-dark);
+}
+
+/* =========================================================
+   CAREER AI CHAT
+   ========================================================= */
+.chat-bubble {
+  max-width: 82%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  word-wrap: break-word;
+}
+.chat-bubble.user {
+  align-self: flex-end;
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  color: #fff;
+  border-bottom-right-radius: 6px;
+}
+.chat-bubble.bot {
+  align-self: flex-start;
+  background: #fff;
+  border: 1px solid rgba(0, 106, 96, 0.12);
+  color: #24312f;
+  border-bottom-left-radius: 6px;
+}
+.typing-dots {
+  display: inline-flex;
+  gap: 5px;
+  padding: 2px 0;
+}
+.typing-dots span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #9db3b0;
+  animation: ph-blink 1.2s infinite;
+}
+.typing-dots span:nth-child(2) { animation-delay: 0.2s; }
+.typing-dots span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes ph-blink {
+  0%, 80%, 100% { opacity: 0.3; transform: translateY(0); }
+  40% { opacity: 1; transform: translateY(-3px); }
+}
+.filter-chip {
+  background: #fff;
+  border: 1.5px solid rgba(0, 106, 96, 0.18);
+  color: #33413f;
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 0.5rem 1.15rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+.filter-chip:hover {
+  border-color: var(--brand-light);
+  color: var(--brand);
+}
+.filter-chip.active {
+  background: linear-gradient(135deg, var(--brand), var(--brand-light));
+  border-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(0, 106, 96, 0.25);
+}
+
+/* =========================================================
+   CHAT BOX (career AI)
+   ========================================================= */
+.quick-chip {
+  background: #fff;
+  border: 1.5px solid rgba(0, 106, 96, 0.25);
+  color: var(--brand);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  transition: all 0.15s ease;
+}
+.quick-chip:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+/* =========================================================
+   WOMEN'S HUB
+   ========================================================= */
+.like-btn {
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  color: #c4cfcd;
+  cursor: pointer;
+  transition: transform 0.15s ease, color 0.15s ease;
+  line-height: 1;
+}
+.like-btn:hover {
+  transform: scale(1.15);
+}
+.like-btn.liked {
+  color: #e0245e;
+}
+.like-count {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   FORMS (soft inputs)
+   ========================================================= */
+.input-soft {
+  border: 1.5px solid rgba(0, 106, 96, 0.16);
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  font-size: 0.92rem;
+  background: #fff;
+  outline: none;
+  transition: border 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+}
+.input-soft:focus {
+  border-color: var(--brand-light);
+  box-shadow: 0 0 0 4px rgba(0, 168, 150, 0.12);
+}
+
+/* =========================================================
+   AUTH SPLIT SCREEN (login / register)
+   ========================================================= */
+.auth-wrap {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.auth-side {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 56px;
+  position: relative;
+  overflow: hidden;
+}
+.auth-side::after {
+  position: absolute;
+  right: -40px;
+  bottom: -50px;
+  font-size: 15rem;
+  opacity: 0.08;
+  line-height: 1;
+}
+.auth-side-login {
+  background: linear-gradient(150deg, #06211e 0%, #004d45 55%, #006a60 100%);
+}
+.auth-side-login::after { content: "⛰️"; }
+.auth-side-register {
+  background: linear-gradient(150deg, #006a60 0%, #00a896 60%, #0d7d6f 100%);
+}
+.auth-side-register::after { content: "👩‍💻"; }
+.benefit {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.benefit .tick {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  flex: 0 0 26px;
+  background: rgba(255, 255, 255, 0.2);
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+}
+@media (max-width: 991px) {
+  .auth-wrap { grid-template-columns: 1fr; }
+  .auth-side { display: none; }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.ph-footer {
+  background: #04211d;
+  color: #fff;
+  margin-top: 48px;
+}
+.ph-footer h5 {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.ph-footer a {
+  color: #9fc4bf;
+  text-decoration: none;
+  font-size: 0.9rem;
+  display: block;
+  padding: 3px 0;
+  transition: color 0.15s ease;
+}
+.ph-footer a:hover {
+  color: var(--brand-light);
+}
+.social-btn,
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #9fc4bf;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+.social-btn:hover,
+.footer-social:hover {
+  background: var(--brand-light);
+  color: #fff;
+}
+
+/* roadmap accordion panel */
+.roadmap-panel {
+  display: none;
+}
+.roadmap-panel.show {
+  display: block;
+}
+
+/* chat window (career AI) */
+.chat-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f4f8f7;
+  border: 1px solid rgba(0, 106, 96, 0.10);
+  border-radius: 16px;
+  padding: 18px;
+  height: 380px;
+  overflow-y: auto;
+}
+
+/* =========================================================
+   FILTER CHIPS (skills / opportunities / women's hub)
+   ========================================================= */
+
+/* =========================================================
+   DIVIDERS / MISC
+   ========================================================= */
+.divider-soft {
+  border: 0;
+  border-top: 1px solid rgba(0, 106, 96, 0.12);
+}
+.divider-dark {
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- Toast ---------- */
+.ph-toast {
+  position: fixed;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #12211f;
+  color: #fff;
+  font-size: 0.86rem;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 2000;
+  max-width: 90vw;
+  text-align: center;
+}
+.ph-toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ---------- Reveal ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 576px) {
+  .hero-title { font-size: 1.9rem; }
+  .phone-mock { width: 250px; }
+}
+
+/* ===== Brand logo (image) ===== */
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+/* footer social buttons — .ph-footer a (higher specificity) forces display:block,
+   so re-state flex here to keep icons centered inside their circles */
+.ph-footer .social-btn,
+.ph-footer .footer-social {
+  display: inline-flex;
+  padding: 0;
+}
+

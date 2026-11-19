@@ -1,0 +1,402 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholarships & Jobs — GB Digital Hub</title>
+  <meta name="description" content="Currently active, verified scholarships and government job listings for students and job seekers of Gilgit-Baltistan." />
+  <link rel="icon" href="assets/img/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { corePlugins: { preflight: false } };
+  </script>
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-xl fixed-top ph-navbar py-2">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="GB Digital Hub" /></a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link active" href="opportunities.html">Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="roadmaps.html">Roadmaps</a></li>
+          <li class="nav-item"><a class="nav-link" href="womens-hub.html">Women's Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="career-ai.html">Career AI</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-ghost-brand btn-sm px-3">Log in</a>
+          <a href="register.html" class="btn btn-brand btn-sm px-3">Join Free</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="hero pt-5">
+    <div class="container position-relative pt-5 pb-5 text-center" style="max-width:820px">
+      <span class="hero-badge mb-3">🎯 Scholarships • Jobs</span>
+      <h1 class="hero-title mb-3">Opportunities for <span class="accent">mountain talent</span></h1>
+      <p class="lead-soft mb-0">
+        Currently active scholarships and job vacancies — verified against official
+        websites, for students and job seekers of Gilgit-Baltistan.
+      </p>
+    </div>
+    <div class="hero-mountain">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" style="width:100%;height:60px">
+        <path fill="#ffffff" d="M0,70 L160,30 L320,62 L500,20 L680,58 L860,18 L1030,54 L1200,28 L1360,56 L1440,36 L1440,90 L0,90 Z"></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- STATS + FILTER + LIST -->
+  <section class="pt-5 pb-5 bg-white">
+    <div class="container">
+      <div class="row g-3 text-center mb-4">
+        <div class="col-sm-4">
+          <div class="float-card p-3">
+            <div class="stat-num" style="font-size:1.7rem">8</div>
+            <div class="stat-label">Live Opportunities</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="float-card p-3">
+            <div class="stat-num" style="font-size:1.7rem">2</div>
+            <div class="stat-label">Types</div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="float-card p-3">
+            <div class="stat-num" style="font-size:1.7rem" id="savedCount">0</div>
+            <div class="stat-label">Saved by You</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-soft p-3 p-md-4 mb-4 reveal">
+        <div class="d-flex gap-2 flex-wrap justify-content-center">
+          <button class="filter-chip active" data-opp-filter="all" aria-pressed="true">All</button>
+          <button class="filter-chip" data-opp-filter="Scholarship" aria-pressed="false">Scholarship</button>
+          <button class="filter-chip" data-opp-filter="Job" aria-pressed="false">Job</button>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Ehsaas Undergraduate Scholarship -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Scholarship">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Scholarship</span>
+                <span class="badge-purple">⭐ Featured</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">Ehsaas Undergraduate Scholarship (HEC)</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">Higher Education Commission — Pakistan</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> November 30, 2026</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> Full tuition fee + monthly stipend</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Public sector universities across Pakistan</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Need-based funding for undergraduate students from low-income families. Apply online on the HEC Ehsaas portal with help from your university's financial aid office.
+            </p>
+            <a href="http://ehsaas.hec.gov.pk/" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=Ehsaas%20Undergraduate%20Scholarship%20(HEC)&amp;type=Scholarship" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gates Cambridge Scholarship -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Scholarship">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Scholarship</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">Gates Cambridge Scholarship</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">Gates Cambridge Trust — United Kingdom</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> December 8, 2026 / January 6, 2027</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> Fully funded — tuition, stipend &amp; travel</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Cambridge, United Kingdom</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Masters and PhD funding for outstanding international students with leadership potential. Two application rounds each year, with automatic consideration for eligible courses.
+            </p>
+            <a href="https://www.gatescambridge.org/" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=Gates%20Cambridge%20Scholarship&amp;type=Scholarship" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Clarendon Fund Scholarship (Oxford) -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Scholarship">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Scholarship</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">Clarendon Fund Scholarship (Oxford)</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">University of Oxford</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> December 2026 / January 2027</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> Fully funded — course fees + living grant</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Oxford, United Kingdom</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Over 200 new fully-funded scholarships each year. You are considered automatically when you apply to Oxford by the December or January deadline — no separate application form.
+            </p>
+            <a href="https://www.ox.ac.uk/clarendon" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=Clarendon%20Fund%20Scholarship%20(Oxford)&amp;type=Scholarship" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- La Trobe Vice Chancellor Scholarship -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Scholarship">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Scholarship</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">La Trobe Vice Chancellor Scholarship</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">La Trobe University — Australia</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> December 14, 2026 / May 17, 2027</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> Tuition fee scholarship</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Melbourne, Australia</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Merit-based tuition scholarships for high-achieving international students starting undergraduate or postgraduate coursework degrees in 2027.
+            </p>
+            <a href="https://www.scholars4dev.com/la-trobe-vice-chancellor-scholarship-for-international-students/" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=La%20Trobe%20Vice%20Chancellor%20Scholarship&amp;type=Scholarship" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- FPSC Federal Jobs -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Job">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Job</span>
+                <span class="badge-purple">⭐ Featured</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">FPSC Federal Jobs (4/2026)</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">Federal Public Service Commission</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> November 23, 2026</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> BPS-16 to BPS-20 — 278 posts</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Federal services across Pakistan</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Advertisement No. 4/2026 (dated 6 November 2026) — 278 vacancies in federal departments. Apply online on the official FPSC website before the last date.
+            </p>
+            <a href="https://www.fpsc.gov.pk/" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=FPSC%20Federal%20Jobs%20(4/2026)&amp;type=Job" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PPSC Punjab Jobs -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Job">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Job</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">PPSC Punjab Jobs</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">Punjab Public Service Commission</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> November 30, 2026</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> BPS-16 and above — contract &amp; permanent posts</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Punjab, Pakistan</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Current PPSC advertisements are open for teaching, administrative and technical posts. Apply online through the official PPSC portal before the last date.
+            </p>
+            <a href="https://ppsc.gov.pk/" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=PPSC%20Punjab%20Jobs&amp;type=Job" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- National Jobs Portal (NJP) -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Job">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Job</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">National Jobs Portal (NJP)</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">Government of Pakistan</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> Rolling — current posts close Nov 19–25, 2026</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> Multiple BPS levels (BPS-01 to BPS-17)</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Across Pakistan</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Federal and provincial vacancies updated daily — for example Karachi Port Trust posts closing 19–25 November 2026. Create your profile on njp.gov.pk and apply directly.
+            </p>
+            <a href="https://njp.gov.pk/" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=National%20Jobs%20Portal%20(NJP)&amp;type=Job" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- GB Information Department Jobs -->
+        <div class="col-md-6">
+          <div class="card-soft p-4 h-100 hoverable reveal" data-opp-type="Job">
+            <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+              <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="badge-amber">Job</span>
+                <span class="badge-purple">⭐ Featured</span>
+              </div>
+              <button type="button" class="btn btn-sm px-3 save-opp btn-ghost-brand" data-saved="false">
+                Save <i class="bi bi-bookmark ms-1"></i>
+              </button>
+            </div>
+            <h3 style="font-size:1.08rem;margin:0 0 6px">GB Information Department Jobs</h3>
+            <div class="mb-3" style="font-size:.84rem;color:var(--brand);font-weight:600">Information Department — Gilgit-Baltistan</div>
+            <div class="d-grid gap-2 mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-calendar-event me-2 text-brand"></i><strong>Deadline:</strong> Open now — apply as per advertisement</div>
+              <div><i class="bi bi-patch-check me-2 text-brand"></i><strong>Coverage:</strong> LDC ×3 (BPS-14), Asst. Info. Officer ×5 (BPS-17), NLE ×2 (BPS-16)</div>
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i><strong>Location:</strong> Gilgit-Baltistan</div>
+            </div>
+            <p style="color:var(--muted);font-size:.86rem;line-height:1.65">
+              Ten current vacancies in the GB Information Department, with online Apply Now buttons on the official department website.
+            </p>
+            <a href="https://gbinfo.gov.pk/pages/jobs" target="_blank" rel="noopener" style="font-size:.8rem;color:var(--brand);font-weight:600;text-decoration:none">Details &amp; eligibility <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+            <hr class="divider-soft my-3" />
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="apply.html?title=GB%20Information%20Department%20Jobs&amp;type=Job" class="btn btn-brand btn-sm">Apply now <i class="bi bi-arrow-right ms-1"></i></a>
+              <a href="contact.html" class="btn btn-ghost-brand btn-sm">Ask details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ph-footer">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/img/logo.png" alt="GB Digital Hub" style="height:34px;width:auto;background:#fff;border-radius:9px;padding:5px 9px" />
+          </div>
+          <p style="color:#8fb3ae;font-size:.9rem;line-height:1.7">
+            A digital career &amp; skills platform for mountain youth and women.
+            Learn • Grow • Earn — from Gilgit-Baltistan to the world.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Platform</h5>
+          <ul class="list-unstyled d-grid gap-2">
+            <li><a href="skills.html">Skills Academy</a></li>
+            <li><a href="opportunities.html">Scholarships</a></li>
+            <li><a href="roadmaps.html">Roadmaps</a></li>
+            <li><a href="career-ai.html">Career AI</a></li>
+            <li><a href="womens-hub.html">Women's Hub</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="list-unstyled d-grid gap-2">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="register.html">Join Free</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled d-grid gap-2" style="color:#b9d4d0;font-size:.9rem">
+            <li><i class="bi bi-geo-alt me-2"></i>Gilgit-Baltistan</li>
+            <li><i class="bi bi-envelope me-2"></i>bkhalida275@gmail.com</li>
+            <li><i class="bi bi-phone me-2"></i>+92 345 9821430</li>
+            <li><i class="bi bi-clock me-2"></i>Mon – Sat: 9:00 AM – 6:00 PM PKT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top py-3 d-flex flex-wrap justify-content-between gap-2" style="border-color:rgba(255,255,255,.1) !important">
+        <small style="color:#7da39e">© 2026 GB Digital Hub. All rights reserved.</small>
+        <small style="color:#7da39e">Made with ❤️ in Gilgit-Baltistan</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js?v=3"></script>
+</body>
+</html>

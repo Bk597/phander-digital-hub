@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Dashboard — GB Digital Hub</title>
+  <meta name="description" content="Your learning dashboard — enrolled courses, roadmap progress and saved opportunities." />
+  <link rel="icon" href="assets/img/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="assets/vendor/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { corePlugins: { preflight: false } };
+  </script>
+  <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-xl fixed-top ph-navbar py-2">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="GB Digital Hub" /></a>
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-auto gap-1">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="skills.html">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="opportunities.html">Scholarships</a></li>
+          <li class="nav-item"><a class="nav-link" href="roadmaps.html">Roadmaps</a></li>
+          <li class="nav-item"><a class="nav-link" href="womens-hub.html">Women's Hub</a></li>
+          <li class="nav-item"><a class="nav-link" href="career-ai.html">Career AI</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2">
+          <a href="login.html" class="btn btn-ghost-brand btn-sm px-3">Log in</a>
+          <a href="register.html" class="btn btn-brand btn-sm px-3">Join Free</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- WELCOME -->
+  <header class="hero pt-5">
+    <div class="container position-relative pt-5 pb-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="hero-badge mb-3">📊 My Dashboard</span>
+          <h1 class="hero-title mb-2" style="font-size:clamp(1.7rem,3.4vw,2.4rem)">
+            👋 Welcome, <span class="accent" id="dashName">Guest</span>
+          </h1>
+          <p class="lead-soft mb-0">
+            Here's your learning journey — courses in progress, roadmap milestones
+            and saved opportunities, all in one place.
+          </p>
+        </div>
+        <div class="col-lg-5">
+          <div class="row g-3 text-center">
+            <div class="col-4">
+              <div class="float-card p-3 h-100">
+                <div class="stat-num" style="font-size:1.5rem">2</div>
+                <div class="stat-label">Enrolled</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="float-card p-3 h-100">
+                <div class="stat-num" style="font-size:1.5rem">2</div>
+                <div class="stat-label">Saved</div>
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="float-card p-3 h-100">
+                <div class="stat-num" style="font-size:1.5rem">8</div>
+                <div class="stat-label">Listings</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-mountain">
+      <svg viewBox="0 0 1440 90" preserveAspectRatio="none" style="width:100%;height:60px">
+        <path fill="#ffffff" d="M0,70 L150,34 L310,64 L480,20 L650,58 L830,16 L1000,54 L1170,28 L1330,58 L1440,40 L1440,90 L0,90 Z"></path>
+      </svg>
+    </div>
+  </header>
+
+  <section class="py-5 bg-soft">
+    <div class="container">
+      <div class="row g-4">
+        <!-- LEFT -->
+        <div class="col-lg-8">
+          <!-- courses -->
+          <div class="card-soft p-4 mb-4 reveal">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 style="font-size:1.1rem;margin:0">📚 My Courses</h2>
+              <a href="skills.html" class="btn btn-ghost-brand btn-sm px-3">Browse more</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 flex-wrap py-3 border-bottom" style="border-color:rgba(0,106,96,.10) !important">
+              <div class="icon-tile mb-0" style="flex:0 0 46px;width:46px;height:46px;font-size:1.15rem">🎬</div>
+              <div class="flex-grow-1" style="min-width:190px">
+                <div class="fw-bold" style="font-size:.95rem">Frontend Web Development</div>
+                <div class="stat-label">Tech &amp; Coding • 6 Weeks</div>
+              </div>
+              <div style="min-width:160px">
+                <div class="d-flex justify-content-between mb-1" style="font-size:.74rem;color:var(--muted)">
+                  <span>Progress</span><span class="fw-bold text-brand">65%</span>
+                </div>
+                <div class="progress-ph"><span style="width:65%"></span></div>
+              </div>
+              <a href="skills.html" class="btn btn-brand btn-sm px-3">Continue</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 flex-wrap py-3">
+              <div class="icon-tile mb-0" style="flex:0 0 46px;width:46px;height:46px;font-size:1.15rem">🎬</div>
+              <div class="flex-grow-1" style="min-width:190px">
+                <div class="fw-bold" style="font-size:.95rem">Freelance Mastery &amp; Remote Work</div>
+                <div class="stat-label">Freelancing • 4 Weeks</div>
+              </div>
+              <div style="min-width:160px">
+                <div class="d-flex justify-content-between mb-1" style="font-size:.74rem;color:var(--muted)">
+                  <span>Progress</span><span class="fw-bold text-brand">40%</span>
+                </div>
+                <div class="progress-ph"><span style="width:40%"></span></div>
+              </div>
+              <a href="skills.html" class="btn btn-brand btn-sm px-3">Continue</a>
+            </div>
+          </div>
+
+          <!-- roadmap progress -->
+          <div class="card-soft p-4 reveal" data-progress-scope>
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 style="font-size:1.1rem;margin:0">🧭 Roadmap Progress</h2>
+              <a href="roadmaps.html" class="btn btn-ghost-brand btn-sm px-3">Open roadmaps</a>
+            </div>
+
+            <div class="mb-4 pb-3" style="border-bottom:1px solid rgba(0,106,96,.10)">
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span>💻</span>
+                <span class="fw-bold" style="font-size:.92rem">Frontend Web Developer</span>
+                <span class="ms-auto" style="font-size:.78rem;color:var(--muted)">
+                  <span class="fw-bold text-brand">2/5</span> milestones
+                </span>
+              </div>
+              <div class="progress-ph"><span style="width:40%"></span></div>
+            </div>
+
+            <div>
+              <div class="d-flex align-items-center gap-2 mb-1">
+                <span>💼</span>
+                <span class="fw-bold" style="font-size:.92rem">Global Freelancer &amp; Upwork Pro</span>
+                <span class="ms-auto" style="font-size:.78rem;color:var(--muted)">
+                  <span class="fw-bold text-brand">1/4</span> milestones
+                </span>
+              </div>
+              <div class="progress-ph"><span style="width:25%"></span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="col-lg-4">
+          <!-- saved -->
+          <div class="card-soft p-4 mb-4 reveal">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2 style="font-size:1.1rem;margin:0">🔖 Saved Opportunities</h2>
+            </div>
+
+            <div class="d-flex gap-3 py-3 border-bottom" style="border-color:rgba(0,106,96,.10) !important">
+              <div class="icon-tile mb-0" style="flex:0 0 42px;width:42px;height:42px;font-size:1.1rem;margin:0">🎯</div>
+              <div>
+                <span class="badge-amber">Scholarship</span>
+                <div class="fw-bold mt-1" style="font-size:.88rem;line-height:1.4">Gilgit-Baltistan Digital Youth Scholarship</div>
+                <div class="stat-label" style="font-size:.76rem">
+                  <i class="bi bi-calendar-event me-1"></i>October 25, 2026
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex gap-3 py-3">
+              <div class="icon-tile mb-0" style="flex:0 0 42px;width:42px;height:42px;font-size:1.1rem;margin:0">🎯</div>
+              <div>
+                <span class="badge-amber">Fellowship</span>
+                <div class="fw-bold mt-1" style="font-size:.88rem;line-height:1.4">Northern Women Tech Fellowship</div>
+                <div class="stat-label" style="font-size:.76rem">
+                  <i class="bi bi-calendar-event me-1"></i>November 10, 2026
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- profile -->
+          <div class="card-soft p-4 text-center reveal">
+            <span class="rounded-circle bg-brand text-white d-grid mx-auto mb-3" id="dashAvatar" style="width:74px;height:74px;font-size:1.7rem;place-items:center">G</span>
+            <h2 style="font-size:1.05rem;margin-bottom:2px" id="dashName2">Guest</h2>
+            <div class="stat-label mb-3" id="dashEmail">guest@gbhub.pk</div>
+
+            <div class="d-grid gap-2 text-start mb-3" style="font-size:.84rem;color:var(--muted)">
+              <div><i class="bi bi-geo-alt me-2 text-brand"></i>Gilgit-Baltistan</div>
+              <div><i class="bi bi-lightning-charge me-2 text-brand"></i>Member since Oct 2026</div>
+            </div>
+
+            <hr class="divider-soft" />
+            <div class="d-grid gap-2">
+              <a href="womens-hub.html" class="btn btn-ghost-brand btn-sm">🧣 Visit Women's Hub</a>
+              <a href="career-ai.html" class="btn btn-ghost-brand btn-sm">🤖 Ask Career AI</a>
+              <button class="btn btn-brand btn-sm" id="dashLogout" type="button">Log out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="ph-footer">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <img src="assets/img/logo.png" alt="GB Digital Hub" style="height:34px;width:auto;background:#fff;border-radius:9px;padding:5px 9px" />
+          </div>
+          <p style="color:#8fb3ae;font-size:.9rem;line-height:1.7">
+            A digital career &amp; skills platform for mountain youth and women.
+            Learn • Grow • Earn — from Gilgit-Baltistan to the world.
+          </p>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="social-btn"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-btn"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Platform</h5>
+          <ul class="list-unstyled d-grid gap-2">
+            <li><a href="skills.html">Skills Academy</a></li>
+            <li><a href="opportunities.html">Scholarships</a></li>
+            <li><a href="roadmaps.html">Roadmaps</a></li>
+            <li><a href="career-ai.html">Career AI</a></li>
+            <li><a href="womens-hub.html">Women's Hub</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Company</h5>
+          <ul class="list-unstyled d-grid gap-2">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="register.html">Join Free</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h5>Contact</h5>
+          <ul class="list-unstyled d-grid gap-2" style="color:#b9d4d0;font-size:.9rem">
+            <li><i class="bi bi-geo-alt me-2"></i>Gilgit-Baltistan</li>
+            <li><i class="bi bi-envelope me-2"></i>bkhalida275@gmail.com</li>
+            <li><i class="bi bi-phone me-2"></i>+92 345 9821430</li>
+            <li><i class="bi bi-clock me-2"></i>Mon – Sat: 9:00 AM – 6:00 PM PKT</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top py-3 d-flex flex-wrap justify-content-between gap-2" style="border-color:rgba(255,255,255,.1) !important">
+        <small style="color:#7da39e">© 2026 GB Digital Hub. All rights reserved.</small>
+        <small style="color:#7da39e">Made with ❤️ in Gilgit-Baltistan</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // demo session (static site) — localStorage se naam dikhao
+    (function () {
+      let user = null;
+      try { user = JSON.parse(localStorage.getItem('ph_user') || 'null'); } catch (_) {}
+      const name = user && user.name ? user.name : 'Guest';
+      const initial = name.trim().charAt(0).toUpperCase();
+      document.getElementById('dashName').textContent = name;
+      document.getElementById('dashName2').textContent = name;
+      document.getElementById('dashAvatar').textContent = initial;
+      if (user && user.email) document.getElementById('dashEmail').textContent = user.email;
+
+      document.getElementById('dashLogout').addEventListener('click', () => {
+        localStorage.removeItem('ph_user');
+        location.href = 'index.html';
+      });
+    })();
+  </script>
+</body>
+</html>
